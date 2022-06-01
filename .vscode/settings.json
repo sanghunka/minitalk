@@ -1,0 +1,12 @@
+{
+    "editor.insertSpaces": false,
+    "files.associations": {
+        "**/*.html": "html",
+        "**/templates/**/*.html": "django-html",
+        "ft_printf.h": "c",
+        "minitalk.h": "c",
+        "ios": "c"
+    },
+    "prettier.tabWidth": 2,
+    "editor.stablePeek": false
+}
