@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghunka <sankang@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: sanghun <sankang@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 16:25:04 by sanghun           #+#    #+#             */
-/*   Updated: 2022/06/03 00:25:03 by sanghunka        ###   ########.fr       */
+/*   Updated: 2022/06/02 01:18:21 by sanghun          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	handler(int sig, siginfo_t *info, void *ucontext)
 		byte = 0;
 		idx = 0;
 	}
-	kill(info->si_pid, SIGUSR1);
 }
 
 int	main(void)
