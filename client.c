@@ -6,7 +6,7 @@
 /*   By: sanghunka <sankang@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 16:31:49 by sanghun           #+#    #+#             */
-/*   Updated: 2022/06/03 00:25:05 by sanghunka        ###   ########.fr       */
+/*   Updated: 2022/06/03 00:29:24 by sanghunka        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,13 @@ void	handler(int sig, siginfo_t *info, void *ucontext)
 
 	(void)*info;
 	(void)*ucontext;
-	ft_putstr_fd("1 bit received. Total ", 1);
-	ft_putnbr_fd(++cnt, 1);
-	ft_putstr_fd("bit received", 1);
-	ft_putchar_fd('\n', 1);
+	if (sig == SIGUSR1)
+	{
+		ft_putstr_fd("1 bit received. Total ", 1);
+		ft_putnbr_fd(++cnt, 1);
+		ft_putstr_fd("bit received", 1);
+		ft_putchar_fd('\n', 1);
+	}
 }
 
 int	main(int argc, char *argv[])
