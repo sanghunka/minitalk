@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.c                                           :+:      :+:    :+:   */
+/*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sanghun <sankang@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: sankang <sankang@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 16:25:04 by sanghun           #+#    #+#             */
-/*   Updated: 2022/06/02 01:18:21 by sanghun          ###   ########.fr       */
+/*   Updated: 2022/06/05 21:27:00 by sankang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "minitalk_bonus.h"
 
 void	handler(int sig, siginfo_t *info, void *ucontext)
 {
@@ -30,6 +30,7 @@ void	handler(int sig, siginfo_t *info, void *ucontext)
 		byte = 0;
 		idx = 0;
 	}
+	kill(info->si_pid, SIGUSR1);
 }
 
 int	main(void)
